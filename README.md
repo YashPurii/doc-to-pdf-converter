@@ -60,3 +60,60 @@ A web application that allows users to upload `.docx` files, view metadata, conv
    ```bash
    git clone https://github.com/<your-repo-name>.git
    cd doc-to-pdf-converter
+2. Install dependencies:
+   '''bash
+   pip install -r backend/requirements.txt
+3. Run the application:
+   '''bash
+   python backend/app.py
+4. Open the app in your browser:
+   '''bash
+   http://localhost:5000
+
+---
+
+### Running with Docker
+
+#### Prerequisites
+
+1. Docker installed on your system.
+2. Docker Desktop running (on Windows/macOS).
+
+#### Steps
+
+1. Build the Docker image:
+   ```bash
+   docker build -t doc-to-pdf:latest .
+2. Run the container:
+   '''bash
+   docker run -d -p 5000:5000 --name doc-to-pdf doc-to-pdf:latest
+3. Open the app in your browser:
+   '''bash
+   http://localhost:5000
+
+## Deployment
+
+### Using Docker
+
+1. **Build the Docker image:**
+   ```bash
+   docker build -t doc-to-pdf:latest .
+2. **Run the Docker container:**
+   '''bash
+   docker run -d -p 5000:5000 --name doc-to-pdf doc-to-pdf:latest
+
+### Using Kubernetes
+
+1. **Push the Docker image to a container registry (e.g., Docker Hub):**
+   ```bash
+   docker tag doc-to-pdf <your-dockerhub-username>/doc-to-pdf:latest
+   docker push <your-dockerhub-username>/doc-to-pdf:latest
+   
+2. **Apply the Kubernetes Manifest**
+   '''bash
+   kubectl apply -f deployment/kubernetes_manifest.yaml
+
+3. **Deployment**
+   ```bash
+   kubectl get pods
+   kubectl get services
