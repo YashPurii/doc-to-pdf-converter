@@ -3,8 +3,8 @@ import os
 from werkzeug.utils import secure_filename
 from doc_processor import extract_metadata, convert_docx_to_pdf
 
-app = Flask(__name__, template_folder=r"C:\Users\yashp\OneDrive\Desktop\doc-to-pdf-converter\templates",
-                      static_folder=r"C:\Users\yashp\OneDrive\Desktop\doc-to-pdf-converter\static")
+app = Flask(__name__, template_folder=r"app/templates/",
+                      static_folder=r"app/static/")
 
 # Configuration
 UPLOAD_FOLDER = "uploads"
