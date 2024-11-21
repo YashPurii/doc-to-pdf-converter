@@ -108,12 +108,61 @@ A web application that allows users to upload `.docx` files, view metadata, conv
    ```bash
    docker tag doc-to-pdf <your-dockerhub-username>/doc-to-pdf:latest
    docker push <your-dockerhub-username>/doc-to-pdf:latest
-   
-2. **Apply the Kubernetes Manifest**
-   '''bash
+
+3. **Apply the Kubernetes Manifest**
+   ```bash
    kubectl apply -f deployment/kubernetes_manifest.yaml
 
 3. **Deployment**
    ```bash
    kubectl get pods
    kubectl get services
+
+   ## Future Enhancements
+
+- Add user authentication for secure and personalized access.
+- Extend support for additional file formats like `.txt`, `.rtf`, and `.odt`.
+- Allow users to customize PDF settings, such as layout, page size, and compression options.
+- Integrate cloud storage services (e.g., AWS S3 or Google Drive) for file uploads and downloads.
+- Add analytics to track the number of conversions and usage statistics.
+- Implement a mobile-friendly design for better usability on smaller devices.
+- Create an admin dashboard for managing uploaded files and monitoring application performance.
+
+---
+
+## Contributing
+
+Contributions are welcome! To contribute, follow these steps:
+
+1. **Fork the repository**:
+   - Click the "Fork" button at the top of this repository to create a copy under your GitHub account.
+
+2. **Clone your forked repository**:
+   ```bash
+   git clone https://github.com/<your-username>/doc-to-pdf-converter.git
+   cd doc-to-pdf-converter
+   
+3. **Create a feature branch**:
+   ```bash
+   git checkout -b feature-name
+   
+4. **Make your changes**:
+ - Add or improve functionality.
+ - Ensure the application works locally before committing.
+
+5. **Commit your changes**:
+   ```bash
+   git add .
+   git commit -m "Add description of changes"
+
+6. Push the changes to your forked repository:
+   ```bash
+   git push origin feature-name
+
+7.**Create a pull request**:
+ - Go to the original repository on GitHub.
+ - Click on "Pull Requests" and create a new pull request.
+ - Describe the changes and why they are needed.
+
+Wait for the review:
+Address any feedback or requested changes from maintainers.
