@@ -118,7 +118,7 @@ A web application that allows users to upload `.docx` files, view metadata, conv
    kubectl get pods
    kubectl get services
 
-   ## Future Enhancements
+## Future Enhancements
 
 - Add user authentication for secure and personalized access.
 - Extend support for additional file formats like `.txt`, `.rtf`, and `.odt`.
