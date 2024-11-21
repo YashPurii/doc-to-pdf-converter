@@ -1,6 +1,6 @@
 Flask==2.3.2                 # For building the web server
 python-docx==0.8.11          # To process .docx files
 PyPDF2==3.0.0                # For working with PDFs and password protection
-Werkzeug==2.3.2              # Flask dependency for better file uploads
+Werkzeug==2.3.3              # Flask dependency for better file uploads
 gunicorn==21.2.0             # Production-grade WSGI HTTP server
-reportlab==3.6.14            # For creating and converting to PDF
+reportlab==4.2.5            # For creating and converting to PDF

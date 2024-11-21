@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc-to-PDF Converter</title>
+    <!-- Reference CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Doc-to-PDF Converter</h1>
+        <div class="upload-section">
+            <h2>Upload Your .docx File</h2>
+            <form id="uploadForm">
+                <input type="file" id="docxFile" name="file" accept=".docx" required>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="metadata" class="metadata-section"></div>
+        </div>
+
+        <div class="convert-section">
+            <h2>Convert to PDF</h2>
+            <form id="convertForm">
+                <input type="text" id="password" name="password" placeholder="Optional: Set PDF Password">
+                <button type="submit">Convert</button>
+            </form>
+        </div>
+
+        <div id="downloadSection" class="download-section">
+            <h2>Download Your PDF</h2>
+            <a id="downloadLink" href="#" download>Download PDF</a>
+        </div>
+    </div>
+    <!-- Reference JavaScript -->
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
